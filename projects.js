@@ -10,7 +10,7 @@ class Projects {
         Http.send();
 
         return Http.onreadystatechange=(resp)=> {
-            window_.Vbuddies_projects = resp;
+            window.Vbuddies_projects = resp;
             return resp;
         }
 

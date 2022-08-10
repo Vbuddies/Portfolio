@@ -42,9 +42,9 @@ class TC {
                 if(use_descriptions) return `## My Personal Projects ##`;
                 var screen = "";
 
-                const proj = new this.projects();
+                const proj = new Projects();
 
-                proj.get().forEach(data => {
+                proj.get().forEach((data) => {
                     screen += `
                             🐣 [[;green;]${data.name}[[;gray;] ([[;blue;]${data.html_url}[[;gray;])
                             - ${data.description}
