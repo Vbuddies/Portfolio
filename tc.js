@@ -14,29 +14,53 @@ class TC {
             education: `
                 ## View my educational background ##
                 
-                🎓 [[;green;]Bachelor of Science in Computer Science
-                [[;gray;] - 📅 2019-2023
-                - 🏬 Florida Southern College
-                - 📍 Lakeland, Florida
-                    `,
+🎓 [[;green;]Bachelor of Science in Computer Science
+    [[;gray;] - 📅 2019-2023
+     - 🏬 Florida Southern College
+     - 📍 Lakeland, Florida
+     - [[;red;]Concentrations:[[;gray;]
+            * Web And Cloud Computing
+            * Artifical Intelligence And Machine Learning
+            * Cybersecurity
+`,
 
             work: `
                 ## Know where I work ##
                 
-                
-                      `,
+💼 [[;green;]John J Jerue Companies
+    [[;gray;]- 💻 Junior Software Engineer
+    - 📅 January 2022 - Present
+    - 📍 Lakeland, Florida
+        `,
                 
             awards: `
-                      `,
+                ## Some awards, recognitions & positions ##
+🏆 [[;green;] President's List
+    [[;gray;]- 📅 Last 5 Semesters
+    - 🏬 Florida Southern College
+
+💻 [[;green;] CS Capture the Flag Club President
+    [[;gray;]- 📅 August 2021 - Present
+    - 🏬 Florida Southern College
+
+💻 [[;green;] CS Department Tutor
+    [[;gray;]- 📅 September 2021 - Present
+    - 🏬 Florida Southern College
+        `,
                 
             home: `
                 ## To infinity and beyond! ##
                 `,
 
             contact: `
-                ## Know where to contact me
-                Hey! Just e-mail me at 📨 srobinson6@mocs.flsouthern.com. Have a good day! 
-                `,
+                ## Know where to contact me ##
+
+Hi, thanks for reaching out 
+I can be reached at 📨 srobinson6@mocs.flsouthern.com. Have a good day!
+
+Github:[[;blue;] https://github.com/Vbuddies [[;gray;]
+LinkedIn:[[;blue;] https://www.linkedin.com/in/stephen-chase-robinson-023081186 [[;gray;]
+`,
 
             projects(use_descriptions = false) {
                 if(use_descriptions) return `## My Personal Projects ##`;
