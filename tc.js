@@ -11,6 +11,15 @@ class TC {
                     + "Type 'start' to get started";
         
         this.Commands = {
+            start: `
+                ## The Introduction of it all ##
+
+            Not implemented yet`,
+
+            exit: `
+                ## For those who hate the terminal ##
+            Exit not implemented yet`,
+
             education: `
                 ## View my educational background ##
                 
@@ -64,24 +73,48 @@ LinkedIn:[[;blue;] https://www.linkedin.com/in/stephen-chase-robinson-023081186 
 
             projects(use_descriptions = false) {
                 if(use_descriptions) return `## My Personal Projects ##`;
-                var screen = "";
 
-                const proj = new Projects();
+                return new Promise((resolve, reject) => {
+                    var screen = '';
 
-                proj.get().forEach((data) => {
-                    screen += `
-                            🐣 [[;green;]${data.name}[[;gray;] ([[;blue;]${data.html_url}[[;gray;])
-                            - ${data.description}
-                            `;     
+                    const proj = new Projects();
+
+                    proj.get().then(res => {
+                        res = JSON.parse(res)
+                        res.forEach((data) => {
+                            screen +=  `
+                                🐣 [[;green;]${data.name}[[;gray;] ([[;blue;]${data.html_url}[[;gray;])
+                                - ${data.description}
+                                `;
+                        });
+                        resolve(screen);
+                    }).catch(() => resolve("Error encountered"))
                 });
+                // var screen = "";
 
-                return screen;
+                // const proj = new Projects();
+
+                // proj.get().then((res) => {
+                //     res = JSON.parse(res)
+                //     res.forEach((data) => {
+                //         screen += `
+                //             🐣 [[;green;]${data.name}[[;gray;] ([[;blue;]${data.html_url}[[;gray;])
+                //             - ${data.description}
+                //             `;
+                //     })
+
+                //     return screen;
+                // });
             }
         };
     }
 
     getHomeScreen() {
         return this.Home;
+    }
+
+    getProjects() {
+        return this.Commands["projects"]();
     }
 
     getInfo(keyword) {

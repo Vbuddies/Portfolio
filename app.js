@@ -16,8 +16,12 @@ const term = $('#terminal').terminal(
                 msg = tc.getHelp();
                 break;
             case "home":
-            case "exit":
                 window.location = "/";
+                break;
+            case "projects":
+                tc.getProjects().then((res) => {
+                    msg = res
+                });
                 break;
             default:
                 var results = tc.getInfo(command);
@@ -32,7 +36,7 @@ const term = $('#terminal').terminal(
 
         term.resume();
 
-        return msg + (msg.length ? "\n" : "");
+        return msg === undefined ? "No Response" : msg + (msg?.length ? "\n" : "");
 
     },
     {
