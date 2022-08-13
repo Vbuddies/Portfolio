@@ -1,5 +1,3 @@
-import Projects from "./projects.js";
-
 class TC {
     constructor() {
         this.Home = "   _____ __             __                  ________                       ____        __    _                       \n"
@@ -14,7 +12,13 @@ class TC {
             start: `
                 ## The Introduction of it all ##
 
-            Not implemented yet`,
+Welcome to my Portfolio Website!
+I wanted a unique design for this site, and I love working with Linux and the terminal,
+so I decided to make it a terminal theme. If you don't like terminal or this version of
+the site you can type 'exit' at any time to return to a more conventional looking site.
+If you would like to continue using the terminal theme you can type 'help' at any time
+for a list of possible commands.
+            `,
 
             exit: `
                 ## For those who hate the terminal ##
@@ -74,47 +78,12 @@ LinkedIn:[[;blue;] https://www.linkedin.com/in/stephen-chase-robinson-023081186 
             projects(use_descriptions = false) {
                 if(use_descriptions) return `## My Personal Projects ##`;
 
-                return new Promise((resolve, reject) => {
-                    var screen = '';
-
-                    const proj = new Projects();
-
-                    proj.get().then(res => {
-                        res = JSON.parse(res)
-                        res.forEach((data) => {
-                            screen +=  `
-                                🐣 [[;green;]${data.name}[[;gray;] ([[;blue;]${data.html_url}[[;gray;])
-                                - ${data.description}
-                                `;
-                        });
-                        resolve(screen);
-                    }).catch(() => resolve("Error encountered"))
-                });
-                // var screen = "";
-
-                // const proj = new Projects();
-
-                // proj.get().then((res) => {
-                //     res = JSON.parse(res)
-                //     res.forEach((data) => {
-                //         screen += `
-                //             🐣 [[;green;]${data.name}[[;gray;] ([[;blue;]${data.html_url}[[;gray;])
-                //             - ${data.description}
-                //             `;
-                //     })
-
-                //     return screen;
-                // });
             }
         };
     }
 
     getHomeScreen() {
         return this.Home;
-    }
-
-    getProjects() {
-        return this.Commands["projects"]();
     }
 
     getInfo(keyword) {

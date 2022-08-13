@@ -13,15 +13,41 @@ const term = $('#terminal').terminal(
             case "help":
             case "ls":
             case "ll":
-                msg = tc.getHelp();
+                term.echo(tc.getHelp()).resume();
                 break;
             case "home":
                 window.location = "/";
                 break;
             case "projects":
-                tc.getProjects().then((res) => {
-                    msg = res
+
+            if(typeof window.Vbuddies_projects == "object") {
+                let data = window.Vbuddies_projects
+                data.forEach((p) => {
+                    term.echo(`
+🐣 [[;green;]${p.name}[[;gray;] ([[;blue;]${p.html_url}[[;gray;])
+- ${p.description}
+                    `);
                 });
+                term.resume();
+            } else {
+
+
+                $.ajax({
+                    url: "https://api.github.com/users/Vbuddies/repos",
+                    method: "get",
+                    async: false,
+                    success: data => {
+                        window.Vbuddies_projects = data;
+                        data.forEach((p) => {
+                            term.echo(`
+🐣 [[;green;]${p.name}[[;gray;] ([[;blue;]${p.html_url}[[;gray;])
+- ${p.description}
+                            `);
+                        });
+                        term.resume();
+                    }
+                });
+            }
                 break;
             default:
                 var results = tc.getInfo(command);
@@ -31,13 +57,14 @@ const term = $('#terminal').terminal(
                 } else if (command.length > 0) {
                     msg = `[[;red;]Command "${command}" not found.`;
                 }
+                if(command == 'start') {
+                    term.typing('echo', 100, msg, function() {});
+                    term.resume();
+                } else {
+                    term.echo(msg).resume();
+                }
                 break;
         }
-
-        term.resume();
-
-        return msg === undefined ? "No Response" : msg + (msg?.length ? "\n" : "");
-
     },
     {
         prompt: '>',
