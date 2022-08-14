@@ -58,7 +58,8 @@ const term = $('#terminal').terminal(
                     msg = `[[;red;]Command "${command}" not found.`;
                 }
                 if(command == 'start') {
-                    term.typing('echo', 100, msg, function() {});
+                    term.echo();
+                    term.typing('echo', 50, msg, function() {});
                     term.resume();
                 } else {
                     term.echo(msg).resume();
@@ -67,7 +68,7 @@ const term = $('#terminal').terminal(
         }
     },
     {
-        prompt: '>',
+        prompt: 'guest@SCR-Terminal>',
         name: "main",
         autucompleteMenu: true,
         completion: Object.keys(tc.Commands)
@@ -76,14 +77,3 @@ const term = $('#terminal').terminal(
 
 term.clear();
 term.echo(tc.getHomeScreen());
-
-//     start: function() {
-//         this.echo("\n\tWelcome to my Portfolio Website!");
-//         this.echo("\tI wanted a unique design for this site, and so I decided to go with a")
-//         this.echo("\tterminal theme because I do enjoy using Linux. If you don't like this")
-//         this.echo("\tversion of the site and would prefer a more typcial looking site, you ")
-//         this.echo("\tcan type 'exit' at any time to return to a more conventional site.\n")
-//         this.echo("\n\tIf you think you would enjoy this version of the site, you can enter")
-//         this.echo("\t'help' at any time to learn all the commands or you can type 'help' after")
-//         this.echo("\t a command to learn more about that specific command.")
-//     },

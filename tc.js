@@ -15,8 +15,8 @@ class TC {
 Welcome to my Portfolio Website!
 I wanted a unique design for this site, and I love working with Linux and the terminal,
 so I decided to make it a terminal theme. If you don't like terminal or this version of
-the site you can type 'exit' at any time to return to a more conventional looking site.
-If you would like to continue using the terminal theme you can type 'help' at any time
+the site you can type [[;#801008;]exit[[;default;] at any time to return to a more conventional looking site.
+If you would like to continue using the terminal theme you can type [[;green;]help[[;default;] at any time
 for a list of possible commands.
             `,
 
