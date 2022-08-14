@@ -2,7 +2,7 @@ import TC from "./tc.js";
 // Docs for the terminal
 // https://terminal.jcubic.pl/api_reference.php#options
 
-
+$("#standard").hide();
 const tc = new TC();
 const term = $('#terminal').terminal(
     function(command, term) {
@@ -61,6 +61,10 @@ const term = $('#terminal').terminal(
                     term.echo();
                     term.typing('echo', 50, msg, function() {});
                     term.resume();
+                } else if (command == "exit") {
+                    //get terminal and hide
+                    $("#terminal").hide();
+                    $("#standard").show();
                 } else {
                     term.echo(msg).resume();
                 }

@@ -22,7 +22,7 @@ for a list of possible commands.
 
             exit: `
                 ## For those who hate the terminal ##
-            Exit not implemented yet`,
+            `,
 
             education: `
                 ## View my educational background ##
