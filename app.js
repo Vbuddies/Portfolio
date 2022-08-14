@@ -24,7 +24,7 @@ const term = $('#terminal').terminal(
                 let data = window.Vbuddies_projects
                 data.forEach((p) => {
                     term.echo(`
-🐣 [[;green;]${p.name}[[;gray;] ([[;blue;]${p.html_url}[[;gray;])
+🐣 [[;green;]${p.name}[[;gray;] ([[;default;]${p.html_url}[[;gray;])
 - ${p.description}
                     `);
                 });
@@ -40,7 +40,7 @@ const term = $('#terminal').terminal(
                         window.Vbuddies_projects = data;
                         data.forEach((p) => {
                             term.echo(`
-🐣 [[;green;]${p.name}[[;gray;] ([[;blue;]${p.html_url}[[;gray;])
+🐣 [[;green;]${p.name}[[;gray;] ([[;default;]${p.html_url}[[;gray;])
 - ${p.description}
                             `);
                         });

@@ -1,12 +1,12 @@
 class TC {
     constructor() {
-        this.Home = "   _____ __             __                  ________                       ____        __    _                       \n"
+        this.Home = "[[;#54B0FF;]   _____ __             __                  ________                       ____        __    _                       \n"
                     + "  / ___// /____  ____  / /_  ___  ____     / ____/ /_  ____ _________     / __ \\____  / /_  (_)___  _________  ____  \n"
                     + "  \\__ \\/ __/ _ \\/ __ \\/ __ \\/ _ \\/ __ \\   / /   / __ \\/ __ \`/ ___/ _ \\   / /_/ / __ \\/ __ \\/ / __ \\/ ___/ __ \\/ __ \\ \n"
                     + " ___/ / /_/  __/ /_/ / / / /  __/ / / /  / /___/ / / / /_/ (__  )  __/  / _, _/ /_/ / /_/ / / / / (__  ) /_/ / / / / \n"
                     + "/____/\\__/\\___/ .___/_/ /_/\\___/_/ /_/   \\____/_/ /_/\\__,_/____/\\___/  /_/ |_|\\____/_.___/_/_/ /_/____/\\____/_/ /_/  \n"
                     + "             /_/                                                                                                    \n\n"
-                    + "Type 'start' to get started";
+                    + "[[;default;]Type [[;green;]start[[;default;] to get started";
         
         this.Commands = {
             start: `
@@ -71,8 +71,8 @@ for a list of possible commands.
 Hi, thanks for reaching out 
 I can be reached at 📨 srobinson6@mocs.flsouthern.com. Have a good day!
 
-Github:[[;blue;] https://github.com/Vbuddies [[;gray;]
-LinkedIn:[[;blue;] https://www.linkedin.com/in/stephen-chase-robinson-023081186 [[;gray;]
+Github: https://github.com/Vbuddies 
+LinkedIn: https://www.linkedin.com/in/stephen-chase-robinson-023081186 
 `,
 
             projects(use_descriptions = false) {
@@ -108,7 +108,7 @@ LinkedIn:[[;blue;] https://www.linkedin.com/in/stephen-chase-robinson-023081186 
                 preview = tokens.join("").replace(/#/g, "").trim();
             }
 
-            help += `\t[[;yellow;]${cmd.padEnd(15)}[[;gray;]${preview}\n`;
+            help += `\t[[;#54B0FF;]${cmd.padEnd(15)}[[;#9C7B2C;]${preview}\n`;
         });
         return help;
     }
