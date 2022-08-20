@@ -1,0 +1,160 @@
+/* Standard Site CSS */
+*  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none !important;
+    outline: none !important;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.65;
+    color: #e1e1e1;
+}
+
+
+
+
+
+.header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:200px;
+    background-color: #17181B;
+    overflow: auto;
+    overflow-x:hidden;
+    text-align: center;
+    z-index: 999;
+    border-right: 1px solid #202226;
+}
+
+.simplebar {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.header-main .image-container {
+    position: relative;
+}
+
+.header-main .image-container .header-name {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 0;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    z-index:1;
+}
+
+.header-main .image-container .header-name::before {
+    background-color: #E82A2A;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+}
+
+.header-main .image-container img {
+    position: relative;
+}
+
+.header-main nav.nav-menu ul li {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #202226;
+    text-align: left;
+}
+
+.header-main nav.nav-menu ul li a {
+    display: block;
+    line-height: 45px;
+    padding-left: 70px;
+    position: relative;
+    color: #777;
+}
+
+.header-main nav.nav-menu ul li a.active {
+    color: #fff;
+}
+
+.header-main nav.nav-menu ul li a span.nav-menu-icon {
+    position: absolute;
+    left: 40px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+.header-main .nav-footer {
+    margin-top: 2rem;
+    width:100%;
+}
+
+.header-main .nav-footer .social {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-main .nav-footer .social li {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.header-main .nav-footer .social li a {
+    color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media Content Stuff */
+@media screen and (min-height: 610px) {
+    .header-main .nav-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
