@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stephen Chase Robinson</title>
+
+    <!-- Jqeury -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&amp;lang=en">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400&amp;lang=en">
-    <link rel="stylesheet" href="standard.css">
+
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/e42b456eb3.js" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="standard.css">
 </head>
 <body>
     <div id="page">
@@ -27,7 +36,7 @@
                             <nav class="nav-menu">
                                 <ul>
                                     <li>
-                                        <a class="pt-link active" href="#">
+                                        <a class="pt-link active" href="#home">
                                             <span class="nav-menu-icon">
                                                 <i class="fa-solid fa-house"></i>
                                             </span>
@@ -79,10 +88,10 @@
                             <div class="nav-footer">
                                 <ul class="social">
                                     <li>
-                                        <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                                        <a href="https://github.com/Vbuddies" target="_blank"><i class="fa-brands fa-square-github"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/in/stephen-chase-robinson/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -92,7 +101,7 @@
             </div>
         </header>
         <div id="main" class="site-main">
-            <section id="home" class="banner-section pt-page page-active" style="background-image: url('../img/background/home.jpg')">
+            <section id="home" class="banner-section pt-page page-active" style="background-image: url('../img/background/home-1.jpg')">
                 <div class="content-wrapper" style="height:100%;overflow:hidden;">
                     <div class="banner-content">
                         <h1 class="mb-20">
@@ -109,12 +118,13 @@
                     </div>
                 </div>
             </section>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
+            <section id="about" class="about-section pt-page">about</section>
+            <section id="resume" class="resume-section pt-page">resume</section>
+            <section id="portfolio" class="portfolio-section pt-page">portfolio</section>
+            <section id="blog" class="blog-section pt-page">blog</section>
+            <section id="contact" class="contact-section pt-page">contact</section>
         </div>
     </div>
+    <script type="module" src="./standard.js"></script>
 </body>
 </html>
