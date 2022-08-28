@@ -11,7 +11,7 @@ function hideAllRoutes() {
     page.removeClass("page-active")
 }
 
-window.addEventListener('hashchange', function() {
+function changeRoute() {
     hideAllRoutes();
     var page;
     var link;
@@ -51,4 +51,11 @@ window.addEventListener('hashchange', function() {
     link.addClass("active")
     //add page-active to section
     page.addClass("page-active")
-});
+}
+
+
+window.addEventListener('hashchange', changeRoute());
+
+
+//Check if window already has hash
+changeRoute();

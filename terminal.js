@@ -62,9 +62,8 @@ const term = $('#terminal').terminal(
                     term.typing('echo', 50, msg, function() {});
                     term.resume();
                 } else if (command == "exit") {
-                    //get terminal and hide
-                    $("#terminal").hide();
-                    $("#standard").show();
+                    //go to the standard view
+                    location.href=`${location.href.split("/")[0]}/standard view/home.html`
                 } else {
                     term.echo(msg).resume();
                 }
