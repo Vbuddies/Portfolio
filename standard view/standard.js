@@ -54,7 +54,9 @@ function changeRoute() {
 }
 
 
-window.addEventListener('hashchange', changeRoute());
+window.addEventListener('hashchange', () => {
+    changeRoute();
+});
 
 
 //Check if window already has hash
